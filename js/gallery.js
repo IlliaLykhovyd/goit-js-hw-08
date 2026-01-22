@@ -88,7 +88,7 @@ gallery.addEventListener('click', zooming);
 
 function zooming(event) {
   event.preventDefault();
-  if (event.target === event.currentTarget) {
+  if (event.target.nodeName !== 'IMG') {
     return;
   }
   const instance = basicLightbox.create(`
